@@ -1,0 +1,229 @@
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usetikzlibrary{svg.path}
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.7in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.6in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{1pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{1pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\setlength\itemsep{-0.5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{1pt}}
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    {\Huge \scshape Yash Dixit} \\ \vspace{1pt}
+    Ajmer, Rajasthan \\ \vspace{1pt}
+    \small \href{tel:+916376037064}{\underline{+91-6376037064}} ~ \href{mailto:yashdixit921@gmail.com}{\underline{yashdixit921@gmail.com}} ~ 
+    \href{https://linkedin.com/in/yash-dixit-26bbb5167/}{\underline{linkedin.com/in/yash-dixit-26bbb5167}} ~
+    \href{https://github.com/yash921}{\underline{github.com/yash921}} ~
+    \href{https://leetcode.com/yash921/}{\underline{leetcode.com/yash921}} ~
+    \vspace{-8pt}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+A seasoned Software Engineer with more than 3 years of experience in DevOps, I have been consistently recognized for my exceptional performance and contributions to success in the IT industry. With a proven track record of developing and launching innovative software solutions, I possess extensive expertise in DevOps tools and am also trained in DevOps stacks. This training has enabled me to develop a broad range of proficiency in DevOps technologies and techniques, thus providing me with the ability to craft dynamic software solutions.
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:}{ Python, Java, Groovy, Shell Script, Go} \\
+     \textbf{Infrastructure and DevOps:}{ Jenkins, Docker, Kubernetes, AWS (EC2, Lambda, Redshift, EKS, ECS fargat, CF, VPC, etc.), CloudFormation, Terraform, Ansible, Full-Stack, Helm, ArgoCD, System-design, Bitbucket} \\
+     \textbf{Database:}{ Mysql, PostgreSQL, Microsoft-SQL Server} \\
+    }}
+ \end{itemize}
+ \vspace{-10pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Workato}{Oct 2024 -- Present} 
+      {Field Infrastucture Engineer}{Remote, India}
+      \resumeItemListStart
+        \resumeItem{Automated cloud resource provisioning across AWS, Azure, and GCP based on Jira ticket requests, utilizing Workato recipes to trigger GitHub Actions with user-provided parameters, employing Terraform to provision resources such as EC2 instances, RDS databases, S3 buckets, Bedrock, SQS, Redshift, and other AWS services, and implementing automated monitoring for resource deletion dates with user notifications and usage of the Terraform state file for deletions, thereby achieving end-to-end visibility and automation for resource provisioning and deletion.}
+        \resumeItem{Deployed Workato internal products on AWS cloud using ECS Fargate. Configured and automated CI/CD pipelines using GitHub Actions for both development (Dev) and production (Prod) environments, ensuring continuous deployment with zero downtime through a rolling strategy.}
+        \resumeItem{Enhanced security and scalability by implementing Trivy scans and ECR image scans to detect vulnerabilities, configuring IAM roles for secure interactions between GitHub and AWS Cloud, employing Application Auto Scaling and Load Balancers to manage traffic efficiently, and integrating Okta for secure user authentication.}
+        \resumeItem{Configured AWS infra lab assets for a Sales Kickoff meeting attended by 250+ people, creating SQL users within the same database for each attendee with a set of tables and permissions, as well as users for an AWS Transfer Family SFTP server tailored for their labs.}
+        \resumeItem{\textbf{Tech Stack:} AWS, ECS Fargate, Docker, GitHub Actions, Trivy, ECR, IAM, Okta, CI/CD, Auto Scaling, Load Balancers, Terraform}
+      \resumeItemListEnd 
+\resumeSubHeadingListEnd
+\vspace{-8pt}
+
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {PEGA}{Dec 2021 -- Oct 2024} 
+      {Software Engineer}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Collaborated with internal teams to enhance CI/CD infrastructure, automating tasks to boost team productivity by 30\%.}
+        \resumeItem{Implemented CloudFormation scripts to streamline installation and updates for critical tools such as Bitbucket and Artifactory, achieving 90\% faster deployment times and enhancing system reliability across various environments.}
+        \resumeItem{Developed a Bitbucket plugin leveraging Bitbucket Java APIs to restrict unauthorized access, ensuring SailPoint permissions remained synced; facilitated consistent audits for Pega, enhancing security compliance and audit readiness by 100\%.}
+        \resumeItem{Resolved Inode and performance issues in a Cloudbees Jenkins master by splitting builds into multiple masters using ConfigAsCode, significantly improving team efficiency by 25\%.}
+        \resumeItem{Implemented ALMTools Bot to handle access and operational requests, providing developers with easy access to ALMTools services through a Webex bot, reducing request processing time by 50\%.}
+        \resumeItem{Wrote effective scripts capable of handling large volumes of pod details and API calls efficiently, ensuring smooth and reliable data retrieval from Kubecost to the SDEA warehouse, improving data accuracy by 40\%.}
+        \resumeItem{Implemented Grafana dashboards to visualize metrics for Kubernetes pods, AWS nodes, and various ALM tools like Kubecost, Artifactory, and CloudBees Jenkins. These dashboards were designed to help troubleshoot applications by providing insightful metrics, reducing troubleshooting time by 20\%. Additionally, alerts and synthetic monitoring were configured to notify users when specific thresholds were met.}
+        \resumeItem{\textbf{Tech Stack:} AWS, Kubernetes, Docker, Python Scripting, Bash, Java, Terraform, CI/CD, and Ansible}
+      \resumeItemListEnd 
+\resumeSubHeadingListEnd
+\vspace{-8pt}
+ 
+\resumeSubHeadingListStart 
+ \resumeSubheading
+      {Red Hat}{June 2021 -- Nov 2021} 
+      {ATSE Intern}{Pune, India}
+     \resumeItemListStart
+        \resumeItem{Installed and configured Red Hat RHEL8, Openshift, and Openstack products, reducing setup time by 40\%.}
+        \resumeItem{Conducted basic troubleshooting for Red Hat enterprise application server suite and layered products to resolve technical issues, achieving a 95\% issue resolution rate.}
+        \resumeItem{Auto provisioned Kubernetes Cluster on the fly using Terraform, Ansible, and shell on AWS, reducing provisioning time by 60\%.}
+        \resumeItem{\textbf{Tech Stack:} RedHat Linux (RHEL), Openshift, Ansible, AWS, Terraform}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-3pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{\underline{Permission Restricter (Bitbucket-Plugin)}} $|$ Bitbucket, SailPoint}{(03/2023)}
+            \resumeItemListStart
+                \resumeItem{Designed and implemented a robust Bitbucket plugin that enforces access control policies, preventing unauthorized admin access to Bitbucket repositories and projects. This essential solution seamlessly syncs SailPoint permissions with Bitbucket, facilitating periodic audits for compliance with the Digital Security program, enhancing security compliance by 50\%.}
+            \resumeItemListEnd
+        \resumeSubHeadingListEnd
+    \vspace{-20pt}
+
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{\underline{PipelineProd}} $|$ Jenkins, Docker, Kubernetes, Ansible, GitLab}{(07/2022)}
+            \resumeItemListStart
+                \resumeItem{PipelinePro automates the build, test, and deployment processes, reducing time‑to‑market by 40\% and increasing software quality by 30\%. Using tools like Jenkins, Docker, Kubernetes, Ansible, and GitLab, I designed and implemented a CI/CD pipeline that provides developers with real‑time feedback on code quality, test results, and deployment status. The monitoring system identifies bottlenecks for optimization, resulting in a streamlined development process and faster feature releases.}
+            \resumeItemListEnd
+        \resumeSubHeadingListEnd
+    \vspace{-20pt}
+
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{\underline{Terraform-Driven Application Architecture}} $|$ Terraform, AWS}{(09/2020)}
+            \resumeItemListStart
+                \resumeItem{This project was meticulously developed, prioritizing the five well-architected AWS Pillars. As a result, a robust two-tier architecture was designed for the application. The use of Terraform code efficiently established the necessary infrastructure, ensuring smooth and optimized operation of the application, reducing downtime by 35\%.}
+\resumeItemListEnd \resumeSubHeadingListEnd \vspace{-8pt}.
+
+%-----------OTHERS-----------
+\section{Others}
+    \resumeSubHeadingListStart
+            \begin{itemize}\resumeItemListStart
+                \resumeItem{Gold Award: Secured the first position in the prestigious IDE-India Hackathon at my current company, Pegasystems. (03/2022)}
+                \resumeItem{Secured the first position in the inter-year annual Technical-Project event, J-Techtrix. (02/2019)}
+                \resumeItem{Problem-Solving Enthusiast: Solved more than 500 problems on competitive programming platforms (LeetCode, HackerRank, Codeforces), showcasing strong problem-solving skills.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+ \vspace{-8pt}
+ 
+ %-----------CERTIFICATIONS---------------
+\section{Certifications}
+
+$\sbullet[.75] \hspace{0.1cm}$ {\href{certificateLink.com}{Red Hat Certified System Administrator (RHEL8)}} \hspace{3.5cm}
+$\sbullet[.75] \hspace{0.1cm}$ {\href{certificateLink.com}{Red Hat Certified Engineer (RHCE)}} \hspace{4.4cm}
+$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com} {Oracle Cloud Infrastructure Developer 2020 Certified Associate}}\hspace{1.4cm}
+$\sbullet[.75] \hspace{0.2cm}${\href{certificateLink.com}{AWS Developer - Udemy}} \hspace{0.8cm}
+
+\end{document}
