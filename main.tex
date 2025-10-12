@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Yash Dixit
+% Author : Abey George
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
@@ -119,7 +119,7 @@
 
 %-----------PROFESSIONAL SUMMARY-----------
 \section{Professional Summary}
-Results‑driven Software Engineer with 4+ years across DevOps and Python backend development. I design, build, and operate secure, scalable REST APIs and automation on AWS/Kubernetes using Docker and IaC (Terraform/CloudFormation). Strong in CI/CD, monitoring, and reliability—improving delivery speed, stability, and costs while solving real customer problems.
+Results‑driven Software Engineer with 4+ years across DevOps, Cloud Infrastructure, Python backend development, and AI-powered enterprise systems. Expert in designing and operating scalable solutions on AWS/Kubernetes using Docker, Terraform, and CloudFormation. Currently building event-driven architectures, REST APIs, and intelligent data ingestion pipelines for Workato's Enterprise Search platform. Strong in CI/CD automation, infrastructure provisioning, system reliability, and distributed systems—improving delivery speed, scalability, costs, and customer experience while solving complex technical challenges.
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
@@ -137,8 +137,8 @@ Results‑driven Software Engineer with 4+ years across DevOps and Python backen
   % New Workato GO Team (Enterprise Search) experience
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Workato}{Nov 2024 -- Present}
-      {Software Engineer — Enterprise Search (Workato GO Team)}{Remote, India}
+      {Workato}{June 2025 -- Present}
+      {Software Engineer (Backend) — Enterprise Search (Workato GO Team)}{Remote, India}
       \resumeItemListStart
         \resumeItem{(Internal transition to Workato Core AI Team) Contributed across backend, ingestion, and platform integration for Enterprise Search.}
         \resumeItem{Added failure notifications on datasource creation: sent emails with structured error codes to speed up triage and fix rate.}
@@ -146,14 +146,20 @@ Results‑driven Software Engineer with 4+ years across DevOps and Python backen
         \resumeItem{Built a “Test Connection” flow for datasources (Confluence, Salesforce, Slack, Highspot, Jira, Zendesk, Google Drive) to validate credentials and API reachability before indexing.}
         \resumeItem{Partnered with the infra team to migrate GO from ECS to EKS, centralized logs in OpenSearch, and helped stand up a stage environment mirroring production.}
         \resumeItem{Fixed product bugs and unblocked customer onboarding by troubleshooting connector issues and data access problems.}
-        \resumeItem{\textbf{Tech Stack:} AWS, Kubernetes (EKS), ECS, OpenSearch, Webhooks, REST APIs, Python, Go}
+        \resumeItem{Architected and migrated user search and history event processing from synchronous in-app execution to an event-driven architecture using AWS Kinesis streams and Airflow DAGs, decoupling OpenSearch indexing logic from the core application and improving system scalability and maintainability.}
+        \resumeItem{Designed and implemented pre-crawl connectivity test APIs across 6 major datasources (Confluence, Salesforce, Slack, Highspot, Jira, Zendesk, Google Drive), validating credentials and API reachability before indexing to reduce failed crawl attempts and accelerate customer onboarding by 40\%.}
+        \resumeItem{Built and optimized multiple crawler strategies including parallel user-based Google Drive crawling, shared drives discovery, and incremental indexing pipelines using Apache Airflow, handling enterprise-scale data ingestion across distributed systems.}
+        \resumeItem{Enhanced observability by implementing failure notification system with structured error codes and real-time crawl status webhooks, streaming authentication errors, API failures, and end-to-end logs to the Workato platform for faster triage and resolution.}
+        \resumeItem{Collaborated with infrastructure team to migrate Enterprise Search platform from ECS to EKS, centralized logging infrastructure using OpenSearch, and established staging environment for pre-production validation, improving deployment reliability and debugging capabilities.}
+        \resumeItem{Resolved critical production issues and datasource connector bugs (Confluence, Salesforce, Zendesk) to unblock customer implementations, ensuring seamless integration and data accessibility across enterprise search deployments.}
+        \resumeItem{\textbf{Tech Stack:} Amazon Kinesis, Apache Airflow, OpenSearch, Python, Go, AWS (EKS/ECS), REST APIs}
       \resumeItemListEnd 
   \resumeSubHeadingListStart\end{itemize}
   \vspace{-8pt}
 
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Workato}{Oct 2024 -- Present} 
+      {Workato}{Oct 2024 -- June 2025} 
       {Field Infrastucture Engineer}{Remote, India}
       \resumeItemListStart
         \resumeItem{Automated cloud resource provisioning across AWS, Azure, and GCP based on Jira ticket requests, utilizing Workato recipes to trigger GitHub Actions with user-provided parameters, employing Terraform to provision resources such as EC2 instances, RDS databases, S3 buckets, Bedrock, SQS, Redshift, and other AWS services, and implementing automated monitoring for resource deletion dates with user notifications and usage of the Terraform state file for deletions, thereby achieving end-to-end visibility and automation for resource provisioning and deletion.}
